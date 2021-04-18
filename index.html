@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="header">
+            <h1><a href="#" class="logo">BMI calculator</a></h1>
+            
+            <div class="inputField">
+                <span>身高 cm</span><br>
+                <input type="text" name="height" id="height" placeholder="請輸入身高" value=""><br>
+                <span>體重 kg</span><br>
+                <input type="text" name="weight" id="weight" placeholder="請輸入體重" value=""><br>
+            </div>
+            <div class="hintText"></div>
+            <input class="calculate" type="button" value="看結果">
+            <div class="bmiCircle">
+                <div class="idealBorder bigCircle">
+                    <div class="ideal bmiResult">20.90</div>
+                    <div class="ideal bmiResultTitle">BMI</div>
+                </div>
+                <div class="idealBG smallCircle"></div>
+                <div class="ideal bmiStr">輕度</div>
+                <div class="save">保存</div>
+            </div>
+        </div>
+
+        <div class="content">
+            <h2>BMI 紀錄</h2>
+            <a href="#" class="clearAll">全部刪除</a>
+            <ul class="bmiList">
+            </ul>
+        </div>
+
+        <div class="footer">
+            <h2><a href="#" class="footer_logo">BMI calculator</a></h2>
+        </div>
+    </div>
+
+    <script src="./js/all.js"></script>
+</body>
+</html>

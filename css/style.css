@@ -1,0 +1,464 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*  */
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 微軟正黑體;
+}
+
+.wrap{
+    width: 1024px;
+    margin: 0 auto;
+}
+
+.header{
+    height: 300px;
+    background-color: #424242;
+    position: relative;
+}   
+
+.logo{
+    background-image: url(../img/BMICLogo.png);
+    width: 117px;
+    height: 117px;
+    position: absolute;
+    top: 92px;
+    left: 173px;
+    text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.inputField{
+    position: absolute;
+    width: 250px;
+    height: 153px;
+    left: 387px;   
+    top: 74px; 
+}
+
+.inputField span{
+    font-size: 18px;
+    color: #FFD366;
+}
+
+.inputField input{
+    margin: 7px 0 23px 0;
+    width: 250px;
+    height: 40px;
+    border: 2px solid #FFD366;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.18);
+    font-size: 24px;
+    padding: 8px 16px 8px 16px;
+    box-sizing: border-box;
+    color: rgba(255,255,255,0.5);
+}
+
+.inputField ::placeholder { /* CSS 3 標準 */
+    color: rgba(255,255,255,0.5);
+}
+
+.inputField .hint{
+    color:red;
+    position: absolute;
+    left: 100px;
+}
+
+.hintText{
+    position: absolute;
+    color: red;
+    font-size: 20px;
+    top: 240px;
+    left: 430px;
+}
+
+.header .calculate{
+    position: absolute;
+    left: 690px;
+    top: 92px;
+    width: 120px;
+    height: 120px;
+    border: none;
+    border-radius: 100%;
+    background-color: #FFD366;
+    font-size: 24px;
+}
+
+.header .calculate:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px #FFD366;
+}
+
+.header .calculate:active{
+    background-color: #DEA921;
+}
+
+.header .bmiCircle{
+    position: absolute;
+    width: 123px;
+    height: 123px;
+    left: 688px;
+    top: 89px;
+    display: none;
+}
+
+.header .bigCircle{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    font-size: 24px;
+    box-sizing: border-box;
+}
+
+.header .bmiResult{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 38px;
+    box-sizing: border-box;
+    font-size: 32px;
+}
+
+.header .bmiResultTitle{
+    position: absolute;
+    width: 100%;
+    height: 14px;
+    font-size: 14px;
+    text-align: center;
+    top: 74px;
+}
+.header .smallCircle{
+    position: absolute;
+    left: 87px;
+    top: 93px;
+    width: 24px;
+    height: 24px;
+    border: 3px solid #424242;
+    border-radius: 100%;
+    /* box-sizing: border-box; */
+    background-image: url(../img/icons_loop.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.header .smallCircle:hover{
+    cursor: pointer;
+}
+
+.header .bmiStr{
+    position: absolute;
+    left: 131px;
+    width: 128px;
+    top: 48px;
+    height: 23px;
+    font-size: 32px;
+}
+
+.header .save{
+    position: absolute;
+    padding: 10px 20px;
+    font-size: 20px;
+    width: 40px;
+    background-color: #FFD366;
+    color: #424242;
+    font-weight: bold;
+    border-radius: 5px;
+    left: 150px;
+    top: 130px;
+}
+
+.header .save:hover{
+    cursor: pointer;
+}
+
+.content{
+    background-color: #f5f5f5;
+    padding-bottom: 58px;
+}
+
+.content h2{
+    text-align: center;
+    padding-top: 48px;
+    padding-bottom: 15px;
+    font-size: 24px;
+    color: #424242;
+}
+
+.content .bmiList li{
+    position: relative;
+    /* border: 1px solid black; */
+    width: 624px;
+    height: 62px;
+    margin: 0 auto 16px auto;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #4A4A4A;
+    font-weight: bold;
+}
+.content .bmiList li .smallText{
+    font-size: 12px;
+    top: 25px;
+}
+
+.content .bmiList li .bigText{
+    font-size: 20px;
+    top: 21px;
+}
+
+.content .bmiList li span{
+    position: absolute;
+}
+
+.content .bmiList li .result{
+    left: 19px;
+}
+
+.content .bmiList li .bmiTitle{
+    left: 129px;
+}
+
+.content .bmiList li .bmiData{
+    left: 158px;
+}
+
+.content .bmiList li .weightTitle{
+    left: 252px;
+}
+
+.content .bmiList li .weightData{
+    left: 298px;
+}
+
+.content .bmiList li .heightTitle{
+    left: 386px;
+}
+
+.content .bmiList li .heightData{
+    left: 429px;
+}
+
+.content .bmiList li .date{
+    left: 545px;
+}
+
+.clearAll{
+    display: block;
+    text-align: center;
+    padding: 5px;
+    width: 90px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    background-color: #424242;
+    border-radius: 5px;
+
+    
+}
+
+.clearAll:hover{
+    background-color: #FFD366;
+    color: #424242;
+}
+
+.delete{
+    position: absolute;
+    color:#424242;
+    border: 2px solid #424242;
+    right: -35px;
+    top: 17.5px;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    padding-top: 1.5px;
+    line-height: 1.5;
+    box-sizing: border-box;
+    border-radius: 100%;
+    font-size: 12px;
+}
+
+.delete:hover{
+    color: red;
+    border: 2px solid red;
+}
+
+.delete:hover{
+    cursor: pointer;
+}
+
+.lightBox{
+    width: 7px; 
+    height: 62px;
+}
+
+.ideal{
+    color: #86D73F;
+}
+
+.idealBox{
+    background-color:#86D73F;
+    box-shadow: 2px 0 3px rgba(133,215,63,0.29);
+}
+
+.idealBorder{
+    border: 6px solid #86D73F;
+}
+
+.idealBG{
+    background-color: #86D73F;
+}
+
+.underweight{
+    color: #31BAF9;
+}
+
+.underweightBox{
+    background-color:#31BAF9;
+    box-shadow: 2px 0 3px rgba(49,186,249,0.29);
+}
+
+.underweightBorder{
+    border: 6px solid #31BAF9;
+}
+
+.underweightBG{
+    background-color: #31BAF9;
+}
+
+.overweight{
+    color: #FF982D;
+}
+
+.overweightBox{
+    background-color: #FF982D;
+    box-shadow: 2px 0 3px rgba(255,152,45,0.29);
+}
+
+.overweightBorder{
+    border: 6px solid #FF982D;
+}
+
+.overweightBG{
+    background-color: #FF982D;
+}
+
+.mildObesity{
+    color: #FF6C02;
+}
+
+.mildObesityBox{
+    background-color: #FF6C02;
+    box-shadow: 2px 0 3px rgba(255,108,2,0.29);
+}
+
+.mildObesityBorder{
+    border: 6px solid #FF6C02;
+}
+
+.mildObesityBG{
+    background-color: #FF6C02;
+}
+
+.moderateObesity{
+    color: #FF6C02;
+}
+
+.moderateObesityBox{
+    background-color: #FF6C02;
+    box-shadow: 2px 0 3px rgba(255,108,2,0.29);
+}
+
+.moderateObesityBorder{
+    border: 6px solid #FF6C02;
+}
+
+.moderateObesityBG{
+    background-color: #FF6C02;
+}
+
+.severeObesity{
+    color: #FF1200;
+}
+
+.severeObesityBox{
+    background-color: #FF1200;
+    box-shadow: 2px 0 3px rgba(255,17,0,0.29);
+}
+
+.severeObesityBorder{
+    border: 6px solid #FF1200;
+}
+
+.severeObesityBG{
+    background-color: #FF1200;
+}
+
+.footer{
+    height: 90px;
+    background-color: #FFD366;
+    
+}
+
+.footer_logo{
+    display: block;
+    height: 90px;
+    background-image: url(../img/BMICLogo_small.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+}
